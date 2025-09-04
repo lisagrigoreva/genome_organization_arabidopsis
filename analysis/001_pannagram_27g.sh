@@ -15,5 +15,5 @@
 
 # Run pannagram for 27 genomes 
 pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_manuscripts/01_data/27_genomes -path_out  /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/01_pannagram_27_genomes/ -ref "TAIR10" -nchr 5 -nchr_ref 5
-# Get SNPs
+# Get msa,seq and snps
 features -path_project /groups/nordborg/projects/genome_organization/08_manuscripts/01_data/27_genomes -ref 'TAIR10' -snp -cores 30
