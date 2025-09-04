@@ -17,3 +17,5 @@
 pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_manuscripts/01_data/27_genomes -path_out  /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/01_pannagram_27_genomes/ -ref "TAIR10" -nchr 5 -nchr_ref 5
 # Get msa,seq and snps
 features -path_project /groups/nordborg/projects/genome_organization/08_manuscripts/01_data/27_genomes -ref 'TAIR10' -snp -cores 30
+# Run pannagram for thaliana and 31 A. lyrata genomes 
+pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/ -path_out /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out -ref "TAIR10" -nchr 8 -nchr_ref 5 -log
