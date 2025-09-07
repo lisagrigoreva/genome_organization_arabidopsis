@@ -18,4 +18,8 @@ pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_ma
 # Get msa,seq and snps
 features -path_project /groups/nordborg/projects/genome_organization/08_manuscripts/01_data/27_genomes -ref 'TAIR10' -snp -cores 30
 # Run pannagram for thaliana and 31 A. lyrata genomes 
-pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/ -path_out /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out -ref "TAIR10" -nchr 8 -nchr_ref 5 -log
+pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/ -path_out /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out -ref "TAIR10" -nchr 8 -nchr_ref 5
+# Run chromtools to arrangre crhomosomes together 
+chromotools -path_project /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out  -genomes_out /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out/rearragned_genomes -rearrange -cores 30
+# Run pannagram again (to get synteny plots for 31 lyrata genomes and msa aglignment)
+
