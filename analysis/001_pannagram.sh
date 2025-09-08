@@ -23,3 +23,7 @@ pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_ma
 chromotools -path_project /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out  -genomes_out /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out/rearragned_genomes -rearrange -cores 30
 # Run pannagram again (to get synteny plots for 31 lyrata genomes and msa aglignment)
 pannagram -cores 10 -path_in /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out/rearragned_genomes -path_out /groups/nordborg/projects/genome_organization/08_manuscripts/03_results/001_pannagram_31_lyr_thal/out/rearragned_genomes/out -ref "TAIR10" -nchr 5 -nchr_ref 5 -one2one
+# Extract features from the re-arranged genome
+features -path_project /groups/nordborg/projects/genome_organization/08_manuscripts/01_data/27_genomes -ref 'TAIR10' -snp -seq -cores 30
+
+
